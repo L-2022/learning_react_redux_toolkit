@@ -1,6 +1,6 @@
 // import { useState, useEffect } from "react";
 import "../App";
-import TimerElement from './TimerElement';
+import TimerElement from "./TimerElement.js";
 
 function listTimer({ list, deleteTimer }) {
   return (

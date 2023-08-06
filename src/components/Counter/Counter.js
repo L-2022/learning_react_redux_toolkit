@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  listCountSelector,
-  counterSelector,
   decremented,
   incremented,
   resetCount,
@@ -11,9 +9,10 @@ import {
 } from "../../store/slices/counterSlices";
 
 function Counter() {
-  const countRedax = useSelector(counterSelector.getCounter);
-  const listCount = useSelector(listCountSelector.getListCount);
-  console.log(listCount);
+  const countRedax = useSelector((state) => state.counter.counter);
+
+  const listCount = useSelector((state) => state.counter.listCount);
+
   const dispatch = useDispatch();
   const [count, setCount] = useState(0);
   return (

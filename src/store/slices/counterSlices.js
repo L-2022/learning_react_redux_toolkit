@@ -28,12 +28,12 @@ const counterSlice = createSlice({
   },
 });
 
-export const counterSelector = {
-  getCounter: (state) => state.counter,
-};
-export const listCountSelector = {
-  getListCount: (state) => state.listCount,
-};
+// export const counterSelector = {
+//   getCounter: (state) => state.counter,
+// };
+// export const listCountSelector = {
+//   getListCount: (state) => state.listCount,
+// };
 export const {
   incremented,
   decremented,
@@ -41,4 +41,4 @@ export const {
   saveCount,
   clearListCount,
 } = counterSlice.actions;
-export default counterSlice;
+export default counterSlice.reducer;
